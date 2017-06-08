@@ -13,6 +13,15 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/api/clientes', function(request, response) {
+  response.send([
+      "Charles",
+      "Cawa",
+      "Aline",
+      "José",
+  ])
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
